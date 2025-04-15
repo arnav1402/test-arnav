@@ -20,3 +20,6 @@ after creating your models/db in the models.py then u use the py manage.py makem
 
 admin : arnav with pass 123 and email 1@gmail.com
 Student : Student with pass : JungleSky#4821!
+
+
+added sex
