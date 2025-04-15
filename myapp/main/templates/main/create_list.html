@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Create list{% endblock %}
+
+{% block header %}<h1>CREATE YOUR VERY OWN LIST</h1>{% endblock %}
+
+{% block content %}
+    <h2>create your list</h2>
+    <form method="post" ,action="/create/">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" name="save list">Create New</button>
+    </form>
+{% endblock %}

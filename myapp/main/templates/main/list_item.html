@@ -1,0 +1,26 @@
+{% extends 'main/base.html' %}
+
+{% block title %}VIEW LIST{% endblock %}
+
+{% block header %}
+    <h1>WELCOME USER TO VIEWS</h1>
+{% endblock %}
+
+{% block content %}
+    <h1>List name: {{ ls.name }}</h1>
+    <form action="#" method="POST">
+        {% csrf_token %}
+        <ol>
+            {% for item in ls.item_set.all %}
+                <li>
+                    <input type="checkbox" name="c{{ item.id }}" value="clicked" {% if item.complete %}checked{% endif %}>
+                    {{ item.text }} - {% if item.complete %}COMPLETED{% else %}NOT COMPLETED{% endif %}
+                </li>
+            {% endfor %}
+        </ol>
+        <button type="submit" name="save" value="save">Save Tasks</button>
+        <br><br>
+        <input type="text" name="new" placeholder="New task">
+        <button type="submit" name="newItem" value="newItem">Add Item</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,22 @@
+installation done: pip install django
+
+start project : django-admin startproject <project name>
+
+run a server : py manage.py runserver
+
+to strt an app " cd <project name>
+py manage.py startapp <app name1>
+
+update main/views : has your funcions to access different views or api or scripts
+create urls.py for all the paths u gonna use
+
+
+main.apps.MainConfig' in settings.py to make that the main app exists
+
+also for migrations python manage.py migrate
+
+after creating your models/db in the models.py then u use the py manage.py makemigrations main to make the migrations for the sqllite3 
+
+
+admin : arnav with pass 123 and email 1@gmail.com
+Student : Student with pass : JungleSky#4821!

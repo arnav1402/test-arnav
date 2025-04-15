@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block header %}<h1>Login Here</h1>{% endblock %}
+
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <p>Dont have an Account you can register <a href="/register">here</a></p>
+        <button type="submit" value="Login">
+            Login
+        </button>
+    </form>
+{% endblock %}
